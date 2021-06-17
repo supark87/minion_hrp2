@@ -1,0 +1,34 @@
+Command line: /opt/SPAdes-3.11.1-Linux/bin/spades.py	-s	/data/mapped0_cds.fastq	-s	/data/mapped1_cds.fastq	-s	/data/mapped2_cds.fastq	-o	/data	
+
+System information:
+  SPAdes version: 3.11.1
+  Python version: 3.6.7
+  OS: Linux-4.19.121-linuxkit-x86_64-with-Ubuntu-18.04-bionic
+
+Output dir: /data
+Mode: read error correction and assembling
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+    Library number: 1, library type: single
+      left reads: not specified
+      right reads: not specified
+      interlaced reads: not specified
+      single reads: ['/data/mapped0_cds.fastq', '/data/mapped1_cds.fastq', '/data/mapped2_cds.fastq']
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed (with gzip)
+Assembly parameters:
+  k: automatic selection based on read length
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+Other parameters:
+  Dir for temp files: /data/tmp
+  Threads: 16
+  Memory limit (in Gb): 31
+
