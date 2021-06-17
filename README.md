@@ -21,3 +21,8 @@
 2. Run nextflow script
 
 ` docker run -v /var/run/docker.sock:/var/run/docker.sock -v $PWD:$PWD -w $PWD -ti nextflow/nextflow nextflow hrp2_cons_multi.nf -c nextflowconfig.config  -with-docker container `
+
+3. For different folder
+
+You can change the name of folder which has *fastq files in nextflowconfig.config file. 
+For now the script will be run with files in fastq_pass/barcode01
