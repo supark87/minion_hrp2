@@ -89,6 +89,6 @@ for name in files:
        out_ls.append(line)
 
 with open(output, "w") as outF:
- for line in out_ls:
+	for line in out_ls:
 		outF.write(line)
 		outF.write("\n")
