@@ -1,18 +1,22 @@
+# pfhrp2 typing script
+# 
+# Usage:
+# 
+# python hrp2.py [INPUT/PATH] [OUTPUT/PATH/FILENAME.txt]
+#
+# Note: No trailing "/" necexxary in input path. Input path is directory with desired fasta files.
+
 import sys
 import glob
 
-Path = './barcode1_consensus.fasta'  # user has to change the path whith all the fasta files
+Path = str(sys.argv[1] + "/*.fasta")  # user has to change the path whith all the fasta files
+output = (sys.argv[2])
 
- # user have to change the path
+# Write output header string
+head = ("filename\tstart_VDD\tStop_CLRH\tHRP3\tAmbiguit_check\tLength_between_start_and_stop\ttotal_length_of_repeats\tresidues\texon_1\texon2_start\ttype1\ttype2\ttype3\ttype4\ttype5\ttype6\ttype6\ttype7\ttype8\ttype9\ttype10\ttype11\ttype12\ttype13\ttype14\ttype30\ttype31")
 
-print("filename", '\t',"start_VDD",'\t',"Stop_CLRH",'\t', 'HRP3', '\t', "Ambiguit_check", '\t', "Length between start and stop", '\t', "total_length_of_repeats",'\t', "residues", '\t', "exon_1",'\t', "exon2_start", '\t', "type1",  '\t', "type2",'\t', "type3", '\t', "type4", '\t', "type5", '\t',  "type6", '\t', "type7",'\t', "type8", '\t' "type9", '\t' "type10",  '\t', "type11",'\t', "type12", '\t', "type13" '\t', "type14", '\t', "type30", '\t', "type31" )
-
-print("---------", '\t', "-----------",'\t', "---------",'\t',"---------", '\t', "-----------",'\t', "---------",'\t',"---------", '\t', "-----------",'\t', "---------",'\t', "---------", '\t', "-----------",'\t', "---------",'\t', "-----------",'\t', "---------",'\t', "---------", '\t', "-----------",'\t', "---------")
-
-
-
-#Path = '/Users/dhruvibenpatel/Desktop/Sophie/HRP2_Pacbio/New/*.fasta'
-
+# Create a list of output strings, populate with header string
+out_ls = [head]
 files = glob.glob(Path)
 for name in files:
 
@@ -81,5 +85,10 @@ for name in files:
 # total bases for all above repeat type
        total_bases = type1 * len("AHHAHHVAD") + type2 * len("AHHAHHAAD") + type3 * len("AHHAHHAAY") + type4 * len("AHH") + type5 * len("AHHAHHASD") + type6 *len("AHHATD") + type7 * len("AHHAAD")+ type8 * len("AHHAAY") + type9 * len("AAY") + type10 * len("AHHAAAHHATD") +type11 * len("AHN") + type12 * len("AHHAAAHHEAATH") + type13 * len("AHHASD") + type14 * len("AHHAHHATD") + type30 * len("AHHAVD") + type31 * len("SHHAAY")
        residue = all_dna - total_bases
-   #print(f.name, '\t',exon_1,'\t', exon2_start, '\t', type1,  '\t', type2,'\t', type3,  '\t', type5,'\t', type10,  '\t', type11,'\t', type12,  '\t', type14, '\t', type7,'\t', type8,  '\t', type13,'\t', type6,  '\t', type9, '\t', type4)
-   print(f.name, '\t', start , '\t', stop,'\t', hrp3,'\t',ambiguity, '\t', all_dna , '\t', total_bases, '\t', residue, '\t', exon_1,'\t', exon2_start, '\t', type1,  '\t', type2,'\t', type3, '\t', type4, '\t', type5,'\t', type6, '\t', type7,'\t', type8, '\t', type9, '\t', type10,  '\t', type11,'\t', type12, '\t', type13, '\t', type14, '\t', type30, '\t', type31)
+       line = str(f.name + '\t' + start + '\t' + stop + '\t' + hrp3 + '\t' + ambiguity + '\t' + str(all_dna) + '\t' + str(total_bases) + '\t' + str(residue) + '\t' + str(exon_1) + '\t' + str(exon2_start) + '\t' + str(type1) + '\t' + str(type2) + '\t' + str(type3) + '\t' + str(type4) + '\t' + str(type5) + '\t' + str(type6) + '\t' + str(type7) + '\t' + str(type8) + '\t' + str(type9) + '\t' + str(type10) + '\t' + str(type11) + '\t' + str(type12) + '\t' + str(type13) + '\t' + str(type14) + '\t' + str(type30) + '\t' + str(type31))
+       out_ls.append(line)
+
+with open(output, "w") as outF:
+	for line in out_ls:
+		outF.write(line)
+		outF.write("\n")
