@@ -47,6 +47,7 @@ for name in files:
            stop_len = contents.index("CLRH")
        except:
            all_dna = 0
+		ambiguity = "NA"
        else:
            all_dna = len(contents[start_len : (stop_len + 4)]) - 7
            if "X" in contents[start_len : stop_len] :
