@@ -9,8 +9,8 @@
 import sys
 import glob
 
-Path = str(sys.argv[1] + "/*.fasta")  # user has to change the path whith all the fasta files
-output = (sys.argv[2])
+Path = str(sys.argv[1])  # user has to change the path whith all the fasta files
+
 
 # Write output header string
 head = ("filename\tstart_VDD\tStop_CLRH\tHRP3\tAmbiguit_check\tLength_between_start_and_stop\ttotal_length_of_repeats\tresidues\texon_1\texon2_start\ttype1\ttype2\ttype3\ttype4\ttype5\ttype6\ttype6\ttype7\ttype8\ttype9\ttype10\ttype11\ttype12\ttype13\ttype14\ttype30\ttype31")
@@ -19,7 +19,6 @@ head = ("filename\tstart_VDD\tStop_CLRH\tHRP3\tAmbiguit_check\tLength_between_st
 out_ls = [head]
 files = glob.glob(Path)
 for name in files:
-
    with open (name) as f:
        n = 0
        contents = f.read()  # read the contents of the file
@@ -47,7 +46,7 @@ for name in files:
            stop_len = contents.index("CLRH")
        except:
            all_dna = 0
-		ambiguity = "NA"
+           ambiguity = "NA"
        else:
            all_dna = len(contents[start_len : (stop_len + 4)]) - 7
            if "X" in contents[start_len : stop_len] :
@@ -89,7 +88,7 @@ for name in files:
        line = str(f.name + '\t' + start + '\t' + stop + '\t' + hrp3 + '\t' + ambiguity + '\t' + str(all_dna) + '\t' + str(total_bases) + '\t' + str(residue) + '\t' + str(exon_1) + '\t' + str(exon2_start) + '\t' + str(type1) + '\t' + str(type2) + '\t' + str(type3) + '\t' + str(type4) + '\t' + str(type5) + '\t' + str(type6) + '\t' + str(type7) + '\t' + str(type8) + '\t' + str(type9) + '\t' + str(type10) + '\t' + str(type11) + '\t' + str(type12) + '\t' + str(type13) + '\t' + str(type14) + '\t' + str(type30) + '\t' + str(type31))
        out_ls.append(line)
 
-with open(output, "w") as outF:
+with open("results.csv", "w") as outF:
 	for line in out_ls:
 		outF.write(line)
 		outF.write("\n")
