@@ -7,6 +7,7 @@
 2. Download docker containers for tools used in nextflow script
    In your terminal, pull docker containers using these command lines
 
+` docker pull nextflow/nextflow ` 
 ` docker pull supark87/minion ` 
 
 3. Run nextflow script
