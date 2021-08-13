@@ -1,0 +1,79 @@
+Aug-12 14:17:04.559 [main] DEBUG nextflow.cli.Launcher - $> nextflow hrp2_cons_ver02.nf -c nextflowconfig.config
+Aug-12 14:17:04.742 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.02.0-edge
+Aug-12 14:17:04.771 [main] INFO  nextflow.cli.CmdRun - Launching `hrp2_cons_ver02.nf` [modest_shaw] - revision: 850cb2d88f
+Aug-12 14:17:04.804 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/subinpark/minion_hrp2/nextflowconfig.config
+Aug-12 14:17:04.805 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/subinpark/minion_hrp2/nextflowconfig.config
+Aug-12 14:17:04.838 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Aug-12 14:17:05.949 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/.nextflow/plugins
+Aug-12 14:17:05.953 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-12 14:17:05.959 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Aug-12 14:17:05.982 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-12 14:17:05.987 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-12 14:17:05.995 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-12 14:17:06.014 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-12 14:17:06.096 [main] DEBUG nextflow.Session - Session uuid: 806657b3-3966-496b-9ef1-1698dc235952
+Aug-12 14:17:06.097 [main] DEBUG nextflow.Session - Run name: modest_shaw
+Aug-12 14:17:06.099 [main] DEBUG nextflow.Session - Executor pool size: 16
+Aug-12 14:17:06.117 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.02.0-edge build 5516
+  Created: 01-02-2021 15:34 UTC (15:34 GMT)
+  System: Linux 5.10.25-linuxkit
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_212-b04
+  Encoding: UTF-8 (UTF-8)
+  Process: 1@70ca96e74fc7 [172.17.0.4]
+  CPUs: 16 - Mem: 31.4 GB (4 GB) - Swap: 4 GB (4 GB)
+Aug-12 14:17:06.174 [main] DEBUG nextflow.Session - Work-dir: /Users/subinpark/minion_hrp2/work [fuseblk]
+Aug-12 14:17:06.176 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/subinpark/minion_hrp2/bin
+Aug-12 14:17:06.196 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-12 14:17:06.217 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-12 14:17:06.489 [main] DEBUG nextflow.Session - Session start invoked
+Aug-12 14:17:06.964 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-12 14:17:06.980 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: consensus, maptoreference, plot, countpattern, trim_nanofilt, translate
+Aug-12 14:17:07.037 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: fastq_pass/barcode01/; pattern: *.fastq; options: [:]
+Aug-12 14:17:07.146 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: fastq_pass/barcode01/; pattern: *.fastq; options: [:]
+Aug-12 14:17:07.266 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-12 14:17:07.267 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-12 14:17:07.276 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-12 14:17:07.285 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=16; memory=31.4 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Aug-12 14:17:07.436 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-12 14:17:07.438 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-12 14:17:07.462 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-12 14:17:07.467 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-12 14:17:07.488 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-12 14:17:07.489 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-12 14:17:07.502 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-12 14:17:07.503 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-12 14:17:07.512 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-12 14:17:07.513 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-12 14:17:07.528 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-12 14:17:07.529 [main] DEBUG nextflow.Session - Session await
+Aug-12 14:17:07.728 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:17:07.737 [Task submitter] INFO  nextflow.Session - [61/4c62e9] Submitted process > trim_nanofilt (3)
+Aug-12 14:17:07.755 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:17:07.757 [Task submitter] INFO  nextflow.Session - [f0/9d4944] Submitted process > plot
+Aug-12 14:17:07.781 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:17:07.783 [Task submitter] INFO  nextflow.Session - [e1/f48b92] Submitted process > trim_nanofilt (2)
+Aug-12 14:17:07.798 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:17:07.800 [Task submitter] INFO  nextflow.Session - [55/b79c5b] Submitted process > trim_nanofilt (1)
+Aug-12 14:17:10.121 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: trim_nanofilt (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/61/4c62e9f6c56bdbf5ec7e75f7f9f37f]
+Aug-12 14:17:10.197 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=48; maxQueueSize=144; keepAlive=1m
+Aug-12 14:17:10.918 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: trim_nanofilt (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/e1/f48b92ed37b908518a5db90921980d]
+Aug-12 14:17:10.950 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: trim_nanofilt (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/55/b79c5b45370a32c4ec4ba85f3344c1]
+Aug-12 14:17:11.052 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:17:11.054 [Task submitter] INFO  nextflow.Session - [10/7d8e4f] Submitted process > maptoreference
+Aug-12 14:17:22.881 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: plot; status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/f0/9d49447ef0799d1107ccc6c0d5589f]
+Aug-12 14:20:42.251 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: maptoreference; status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/10/7d8e4f04dcf9786d5ab9dfbd23381d]
+Aug-12 14:20:42.282 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:20:42.283 [Task submitter] INFO  nextflow.Session - [d3/1667dc] Submitted process > consensus
+Aug-12 14:20:43.945 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: consensus; status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/d3/1667dceabbea341de5352ec7d42391]
+Aug-12 14:20:43.965 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:20:43.965 [Task submitter] INFO  nextflow.Session - [a3/14a8d2] Submitted process > translate
+Aug-12 14:20:44.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: translate; status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/a3/14a8d2626c91f3ccf3cf179a352456]
+Aug-12 14:20:44.557 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-12 14:20:44.558 [Task submitter] INFO  nextflow.Session - [a4/54ecf1] Submitted process > countpattern
+Aug-12 14:20:45.109 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: countpattern; status: COMPLETED; exit: 0; error: -; workDir: /Users/subinpark/minion_hrp2/work/a4/54ecf18f3533bec7af05a448c98d69]
+Aug-12 14:20:45.115 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-12 14:20:45.118 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-12 14:20:45.136 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=8; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=3m 57s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=4; peakCpus=4; peakMemory=0; ]
+Aug-12 14:20:45.285 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Aug-12 14:20:45.322 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

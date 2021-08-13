@@ -1,5 +1,0 @@
-- "single reads":
-  - "/data/mapped0_cds.fastq"
-  - "/data/mapped1_cds.fastq"
-  - "/data/mapped2_cds.fastq"
-  "type": "single"
