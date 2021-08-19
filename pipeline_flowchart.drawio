@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-19T14:00:22.782Z" agent="5.0 (Macintosh)" etag="3nljWb0NuBuXOaibYDX6" version="14.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-19T15:28:01.358Z" agent="5.0 (Macintosh)" etag="ToY-hly3uPVmkGVl23qZ" version="14.9.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="833" dy="483" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -30,6 +30,11 @@
         </mxCell>
         <mxCell id="XRWhhsPJ1R5QlkFPLVNZ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wNX_GusTzfl8zVWIh_gY-5" target="wNX_GusTzfl8zVWIh_gY-7">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XRWhhsPJ1R5QlkFPLVNZ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=oval;endFill=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wNX_GusTzfl8zVWIh_gY-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="155" y="220" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="wNX_GusTzfl8zVWIh_gY-5" value="In-depth pipeline" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="95" y="221" width="120" height="60" as="geometry" />
@@ -72,6 +77,9 @@
         </mxCell>
         <mxCell id="XRWhhsPJ1R5QlkFPLVNZ-4" value="EMBOSS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="574" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XRWhhsPJ1R5QlkFPLVNZ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=oval;endFill=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XRWhhsPJ1R5QlkFPLVNZ-9" target="wNX_GusTzfl8zVWIh_gY-5">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="XRWhhsPJ1R5QlkFPLVNZ-9" value=".fast5 files" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="95" y="160" width="120" height="30" as="geometry" />
